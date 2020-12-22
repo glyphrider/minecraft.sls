@@ -4,7 +4,7 @@ provider:
   apiGateway:
     shouldStartNameWithService: true
   deploymentBucket:
-    name: glyphrider-serverless-deployment
+    name: ${env:SLS_DEPLOYMENT_BUCKET}
   name: aws
   region: ${opt:region, 'us-east-2'}
 
