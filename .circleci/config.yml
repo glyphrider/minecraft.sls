@@ -6,7 +6,8 @@ jobs:
     executor:
       name: node/default
     parameters:
-      version: 12.20.0
+      version:
+        default: 12.20.0
     steps:
       - checkout
       - node/install-packages:
