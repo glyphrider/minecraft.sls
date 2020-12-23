@@ -5,18 +5,13 @@ jobs:
   test:
     executor:
       name: node/default
-    parameters:
-      version: "12.20.0"
     steps:
       - checkout
       - node/install-packages:
           pkg-manager: yarn
-      - run:
-          command: node --version
-          name: Check node version
-      - run:
-          command: yarn run jest --coverage
-          name: Run YARN tests
+      - node/test:
+          version: 12.20.0
+          pkg-manager: yarn
 workflows:
   standard:
     jobs:
