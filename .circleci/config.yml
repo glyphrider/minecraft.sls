@@ -5,12 +5,12 @@ jobs:
   test:
     executor:
       name: node/default
+      tag: 12.20
     steps:
       - checkout
       - node/install-packages:
           pkg-manager: yarn
       - node/test:
-          version: 12.20.0
           pkg-manager: yarn
 workflows:
   standard:
