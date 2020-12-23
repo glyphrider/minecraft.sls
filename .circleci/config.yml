@@ -10,6 +10,9 @@ jobs:
       - node/install-packages:
           pkg-manager: yarn
       - run:
+          command: node --version
+          name: Check node version
+      - run:
           command: yarn run jest --coverage
           name: Run YARN tests
 workflows:
