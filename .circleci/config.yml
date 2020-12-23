@@ -10,7 +10,7 @@ jobs:
       - checkout
       - node/install-packages:
           pkg-manager: yarn
-      - node/test:
+      - test:
           pkg-manager: yarn
 workflows:
   standard:
